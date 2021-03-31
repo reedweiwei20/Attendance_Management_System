@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #eee;
+  color:#666;
+}
+
+
+/*Nav Starts*/
+
+.topNavSet {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.topNav {
+    color: #666;
+    width: 180px;
+    text-align: left;
+}
+
+.activeTopNav {
+    color: #723dbe;
+    border: 0px, 0px, 2px, 0px;
+    font-weight: 600;
+    width: 180px;
+    text-align: left;
+}
+
+.topNav:hover, .activeTopNav:hover {
+    color: #723dbe;
+}
+
+.atnContainer {
+    border-bottom-style: solid;
+    border-color: #723dbe;
+}
+
+/*Nav Closes*/
+
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+.addEmployee-container{
+  height: 100vh;
+  width: 100%;
+    align-content: center;
+}
+
+
+.addEmployee-form{
+  margin-left: auto;
+    margin-right: auto;
+  width: 500px;
+    min-width: 100px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+
+.addEmployee-form .form-control{
+  font-size: 15px;
+  min-height: 48px;
+}
+
+input.inputFileLabel {
+    font-size: 15px;
+}
+
+
+.addEmployee-form a{
+  text-decoration: none;
+  color:#666;
+}
+
+
+.addEmployee-form a:hover{
+  color:#723dbe;
+}
+
+
+.txtIp {
+    max-width: 400px;
+    min-width: 100px;
+}
+
+
+.form-control:focus{
+  border-color:#723dbe;
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}
+
+
+.btn-custom{
+  background: #723dbe;
+  border-color:#723dbe;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 48px;
+}
+
+
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus{
+  background: #54229d;
+  border-color: #54229d;
+  color:#fff;
+}
+
+
+.btn-custom:focus{
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}

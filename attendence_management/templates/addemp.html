@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'addempstyle.css' %}">
+    <title>Add New Employee </title>
+</head>
+
+<body>
+  
+ <div class="row justify-content-center">  
+    <ul class="nav justify-content-center topNavSet">
+      <li class="nav-item col-md-3 atnContainer">
+        <a class="nav-link active activeTopNav" href="addemp">Add Employee</a>
+      </li>
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="listemp">List of Employees</a>
+      </li>
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="attend">Attendance</a>
+      </li>
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="sallery">Salary</a>
+      </li>
+     </ul>
+</div>
+    
+     <div class="d-flex addEmployee-container">
+        <form class="addEmployee-form" action="addemp" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1 class="mb-5 font-weight-light text-uppercase">Add Employee</h1>
+            
+              <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="idname" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+            
+            
+              <div class="form-group row mb-4">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+            
+            
+            <div class="form-group row mb-4">
+                <label for="formControlFile" class="col-sm-2 col-form-label">Photo</label>
+                <div class="col-sm-10">
+                    <input type="file"  name= "photo" class="form-control-file form-control-lg inputFileLabel" required>
+                </div>
+            </div>
+            
+            
+
+            
+            
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Aadhar No.</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="adharno" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <label for="inputPhoneNo" class="col-sm-2 col-form-label">Phone No.</label>
+                    <div class="col-sm-10">
+                        <input type="tel" name="phoneno" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+
+             <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">DOB</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="dob" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Job Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="role" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Education</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="education" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Work Experiance</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="workexperience" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Recruitment Date</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="recuritmentdate" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+             <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Medical History</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="medicalhistory" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+             <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Sallery</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="sallery" class="form-control rounded-pill form-control-lg" required>
+                    </div>
+            </div>
+
+            <button type="submit" class="btn mt-5 rounded-pill btn-lg btn-custom btn-block text-uppercase">Add Employee</button>
+            
+        </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #eee;
+  color:#666;
+}
+
+/*Nav Starts*/
+
+.topNavSet {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.topNav {
+    color: #666;
+    width: 180px;
+    text-align: left;
+}
+
+.activeTopNav {
+    color: #723dbe;
+    border: 0px, 0px, 2px, 0px;
+    font-weight: 600;
+    width: 180px;
+    text-align: left;
+}
+
+.topNav:hover, .activeTopNav:hover {
+    color: #723dbe;
+}
+
+.atnContainer {
+    border-bottom-style: solid;
+    border-color: #723dbe;
+}
+
+/*Nav Closes*/
+
+.employeeName {
+    font-weight:600;
+}
+
+.tableTitle {
+    color: #723dbe;
+    font-size: 17px;
+}
+
+.employeeListTable {
+    max-width: 1000px;
+    margin: auto;
+    border-width: 2px;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    margin-top: 0px;
+}
+
+.dropdownLabel {
+    font-size: 14px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.dropdownButton {
+    background-color: #ffffff;
+    color: #666;
+    border: none;
+}
+
+.dropdownButton:hover {
+    background-color: #723dbe;
+    color: #ffffff;
+}
+
+.dropdownWithLabel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.searchTextField {
+    border-radius: 25px;
+    border: none;
+    height: 30px;
+}
+
+.searchField {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.searchTextField:focus{
+  border-color: #723dbe;
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}
+
+
+.dropdownList:hover {
+    background-color: #723dbe;
+    color: #ffffff;
+}
+
+.addEmployeeBtn {
+    text-align: center;
+}
+
+.resultText {
+   text-align: center; 
+    margin-top: 20px;
+}
+
+button.navButton {
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: #ffffff;
+    color: #666;
+    border-color: #723dbe;
+}
+
+.pageNav {
+    text-align: center;
+}
+
+.pageNo, .pageNo:hover {
+    background-color: #723dbe;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+.form-control:focus{
+  border-color:#723dbe;
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}
+.btn-custom {
+  background: #723dbe;
+  border-color:#723dbe;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 48px;
+}
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus{
+  background: #54229d;
+  border-color: #54229d;
+  color:#fff;
+}
+.btn-custom:focus{
+  box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+}

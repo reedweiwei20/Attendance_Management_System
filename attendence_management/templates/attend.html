@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'attendstyle.css' %}">
+    <title>Attendance</title>
+</head>
+
+
+<body>
+ <div class="row justify-content-center">  
+    <ul class="nav justify-content-center topNavSet">
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="addemp">Add Employee</a>
+      </li>
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="listemp">List of Employees</a>
+      </li>
+      <li class="nav-item atnContainer col-md-3">
+        <a class="nav-link active activeTopNav" href="attend">Attendance</a>
+      </li>
+      <li class="nav-item col-md-3">
+        <a class="nav-link topNav" href="sallery">Salary</a>
+      </li>
+     </ul>
+</div> 
+    <h1 class="mb-5 font-weight-light text-uppercase">Attendance</h1>
+    <div class="row">
+    <div class="dropdown dropdownWithLabel col-md-6">
+        <label class="dropdownLabel" for="dropdown">Show</label>
+      <button class="btn btn-secondary dropdown-toggle dropdownButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        10
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item dropdownList" href="#">20</a>
+        <a class="dropdown-item dropdownList" href="#">10</a>
+        <a class="dropdown-item dropdownList" href="#">5</a>
+      </div>
+     <label class="dropdownLabel" for="dropdown">entries</label>
+        </div>
+        <div class="col-md-6 searchField">
+            <input type="text" class="searchTextField" placeholder="  Search...">
+        </div>
+</div>
+
+  <table class="table table-striped employeeListTable">
+    <thead>
+<tr>
+      <th scope="col" class="tableTitle">Employee Name</th>
+      <th scope="col" class="tableTitle">Date</th>
+      <th scope="col" class="tableTitle">Time-In</th>
+        <th scope="col" class="tableTitle">Time-Out</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for empr in emplrep %}
+    <tr>
+      <th scope="row" class="employeeName">{{empr.name}}</th>
+      <td>{{empr.date}}</td>
+      <td>{{empr.intime}}</td>
+        <td>{{empr.outtime}}</td>
+    <tr>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+    <div class="row">
+        <div class="col-md-6 resultText"><p>Showing 1 to 1 of 1 entries</p>
+        </div>
+        <div class="col-md-6 pageNav">
+        <button class="btn mt-5 navButton">Previous</button>
+            <button class="btn mt-5 pageNo">1</button>
+            <button class="btn mt-5 navButton">Next</button>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
